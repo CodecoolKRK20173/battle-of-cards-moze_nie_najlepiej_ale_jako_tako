@@ -11,5 +11,7 @@ public class CardParser extends XMLParser{
 
     public CardRepository getCardRepository() {
         return cardRepository;
+
     }
 }
+
