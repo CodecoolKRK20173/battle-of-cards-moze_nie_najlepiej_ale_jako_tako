@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Cards>
+    <card id="ronaldo">
+        <Description name="Cristiano Ronaldo"/>
+        <Stats>
+            <Stat id="Attack">99</Stat>
+            <Stat id="Defence">35</Stat>
+            <Stat id="Speed">95</Stat>
+            <Stat id="Strength">85</Stat>
+        </Stats>
+    </card>
+    ...
+    <card id="messi">
+        <Description name="Lionel Messi"/>
+        <Stats>
+            <Stat id="Attack">99</Stat>
+            <Stat id="Defence">25</Stat>
+            <Stat id="Speed">98</Stat>
+            <Stat id="Strength">75</Stat>
+        </Stats>
+    </card>
+    ...
+    <card id="firmino">
+        <Description name="Roberto Firmino"/>
+        <Stats>
+            <Stat id="Attack">87</Stat>
+            <Stat id="Defence">45</Stat>
+            <Stat id="Speed">65</Stat>
+            <Stat id="Strength">93</Stat>
+        </Stats>
+    </card>
+    ...
+    <card id="hazard">
+        <Description name="Eden Hazard"/>
+        <Stats>
+            <Stat id="Attack">95</Stat>
+            <Stat id="Defence">40</Stat>
+            <Stat id="Speed">95</Stat>
+            <Stat id="Strength">70</Stat>
+        </Stats>
+    </card>
+    ...
+    <card id="partey">
+        <Description name="Thomas Partey"/>
+        <Stats>
+            <Stat id="Attack">70</Stat>
+            <Stat id="Defence">80</Stat>
+            <Stat id="Speed">66</Stat>
+            <Stat id="Strength">83</Stat>
+        </Stats>
+    </card>
+    ...
+    <card id="kante">
+        <Description name="N'Golo Kante"/>
+        <Stats>
+            <Stat id="Attack">80</Stat>
+            <Stat id="Defence">70</Stat>
+            <Stat id="Speed">65</Stat>
+            <Stat id="Strength">90</Stat>
+        </Stats>
+    </card>
+    ...
+    <card id="wijnaldum">
+        <Description name="Georginio Wijnaldum"/>
+        <Stats>
+            <Stat id="Attack">75</Stat>
+            <Stat id="Defence">75</Stat>
+            <Stat id="Speed">77</Stat>
+            <Stat id="Strength">79</Stat>
+        </Stats>
+    </card>
+    ...
+    <card id="rasiak">
+        <Description name="Grzegorz Rasiak"/>
+        <Stats>
+            <Stat id="Attack">99</Stat>
+            <Stat id="Defence">99</Stat>
+            <Stat id="Speed">99</Stat>
+            <Stat id="Strength">99</Stat>
+        </Stats>
+    </card>
+    ...
+    <card id="aubameyang">
+        <Description name="Pierre-Emerick Aubameyang"/>
+        <Stats>
+            <Stat id="Attack">91</Stat>
+            <Stat id="Defence">20</Stat>
+            <Stat id="Speed">99</Stat>
+            <Stat id="Strength">77</Stat>
+        </Stats>
+    </card>
+    ...
+    <card id="salah">
+        <Description name="Mohamed Salah"/>
+        <Stats>
+            <Stat id="Attack">97</Stat>
+            <Stat id="Defence">60</Stat>
+            <Stat id="Speed">96</Stat>
+            <Stat id="Strength">73</Stat>
+        </Stats>
+    </card>
+    ...
+    <card id="de ligt">
+        <Description name="Matthijs de Ligt"/>
+        <Stats>
+            <Stat id="Attack">66</Stat>
+            <Stat id="Defence">97</Stat>
+            <Stat id="Speed">64</Stat>
+            <Stat id="Strength">96</Stat>
+        </Stats>
+    </card>
+    ...
+    <card id="chiellini">
+        <Description name="Giorgio Chiellini"/>
+        <Stats>
+            <Stat id="Attack">44</Stat>
+            <Stat id="Defence">91</Stat>
+            <Stat id="Speed">57</Stat>
+            <Stat id="Strength">90</Stat>
+        </Stats>
+    </card>
+    ...
+    <card id="ramos">
+        <Description name="Sergio Ramos"/>
+        <Stats>
+            <Stat id="Attack">69</Stat>
+            <Stat id="Defence">98</Stat>
+            <Stat id="Speed">76</Stat>
+            <Stat id="Strength">92</Stat>
+        </Stats>
+    </card>
+    ...
+    <card id="walker">
+        <Description name="Kyle Walker"/>
+        <Stats>
+            <Stat id="Attack">74</Stat>
+            <Stat id="Defence">86</Stat>
+            <Stat id="Speed">82</Stat>
+            <Stat id="Strength">73</Stat>
+        </Stats>
+    </card>
+    ...
+    <card id="van dijk">
+        <Description name="Virgil van Dijk"/>
+        <Stats>
+            <Stat id="Attack">70</Stat>
+            <Stat id="Defence">99</Stat>
+            <Stat id="Speed">80</Stat>
+            <Stat id="Strength">99</Stat>
+        </Stats>
+    </card>
+    ...
+    <card id="bednarek">
+        <Description name="Jan Bednarek"/>
+        <Stats>
+            <Stat id="Attack">35</Stat>
+            <Stat id="Defence">82</Stat>
+            <Stat id="Speed">55</Stat>
+            <Stat id="Strength">75</Stat>
+        </Stats>
+    </card>
+    ...
+    <card id="luiz">
+        <Description name="David Luiz"/>
+        <Stats>
+            <Stat id="Attack">10</Stat>
+            <Stat id="Defence">60</Stat>
+            <Stat id="Speed">40</Stat>
+            <Stat id="Strength">60</Stat>
+        </Stats>
+    </card>
+    ...
+    <card id="sandro">
+        <Description name="Alex Sandro"/>
+        <Stats>
+            <Stat id="Attack">81</Stat>
+            <Stat id="Defence">78</Stat>
+            <Stat id="Speed">85</Stat>
+            <Stat id="Strength">77</Stat>
+        </Stats>
+    </card>
+    ...
+    <card id="mustafi">
+        <Description name="Shkodran Mustafi"/>
+        <Stats>
+            <Stat id="Attack">10</Stat>
+            <Stat id="Defence">12</Stat>
+            <Stat id="Speed">36</Stat>
+            <Stat id="Strength">35</Stat>
+        </Stats>
+    </card>
+    ...
+    <card id="arnold">
+        <Description name="Trent-Alexander Arnold"/>
+        <Stats>
+            <Stat id="Attack">88</Stat>
+            <Stat id="Defence">92</Stat>
+            <Stat id="Speed">88</Stat>
+            <Stat id="Strength">79</Stat>
+        </Stats>
+    </card>
+</Cards>
