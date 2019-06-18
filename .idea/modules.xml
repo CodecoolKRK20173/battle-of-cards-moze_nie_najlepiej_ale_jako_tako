@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/battle-of-cards-moze_nie_najlepiej_ale_jako_tako.iml" filepath="$PROJECT_DIR$/.idea/battle-of-cards-moze_nie_najlepiej_ale_jako_tako.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BattleOfCardGame.iml" filepath="$PROJECT_DIR$/BattleOfCardGame.iml" />
     </modules>
   </component>
 </project>
