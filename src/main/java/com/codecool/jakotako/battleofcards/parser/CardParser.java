@@ -36,7 +36,6 @@ public class CardParser extends XMLParser{
                     String cardStatID = stat.getAttribute("id");
                     String cardStatValue = stat.getTextContent(); //change na getValue?
                     newCard.setCardValueById(cardStatID, Integer.valueOf(cardStatValue));
-                    System.out.println("cipaxD");
                 }
                 cardRepository.addCard(newCard);
             }
