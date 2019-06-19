@@ -13,13 +13,13 @@ public class CardParser extends XMLParser{
     private CardRepository cardRepository;
 
     public CardParser() {
-        this.cardRepository = new CardRepository;
+        this.cardRepository = new CardRepository();
         loadXmlDocument("src/resources/cards.xml");
         parse();
     }
 
     private void parse(){
-        NodeList nodeList = document.getElementsByTagName("Card");
+        NodeList nodeList = document.getElementsByTagName("card");
 
         for(int i = 0;i < nodeList.getLength(); i++){
             Node node = nodeList.item(i);
@@ -36,6 +36,7 @@ public class CardParser extends XMLParser{
                     String cardStatID = stat.getAttribute("id");
                     String cardStatValue = stat.getTextContent(); //change na getValue?
                     newCard.setCardValueById(cardStatID, Integer.valueOf(cardStatValue));
+                    System.out.println("cipaxD");
                 }
                 cardRepository.addCard(newCard);
             }
