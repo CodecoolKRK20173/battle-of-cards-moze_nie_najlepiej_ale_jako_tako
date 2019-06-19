@@ -1,3 +1,4 @@
+package com.codecool.jakotako.battleofcards;
 
 import java.util.*;
 

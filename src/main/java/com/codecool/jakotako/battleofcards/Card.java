@@ -21,7 +21,9 @@ public class Card {
     public void setCardValueById(String id, int value){ //use primitives always except you need to use boxes
         this.fields.put(id, value);
     }
+
     public String getDescription(){
+
             return this.description;
         }
 
