@@ -12,7 +12,7 @@ public class CardParser extends XMLParser{
 
     private CardRepository cardRepository;
 
-    public CardParser{
+    public CardParser() {
         this.cardRepository = new CardRepository;
         loadXmlDocument("src/resources/cards.xml");
         parse();
