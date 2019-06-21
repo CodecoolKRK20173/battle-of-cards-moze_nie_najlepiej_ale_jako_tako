@@ -41,7 +41,7 @@ public class GameController {
         }
     }
 
-    private void addCardsToStack () {
+    private void addCardsToStack() {
         this.stack = new ArrayList<>();
         stack.addAll(cardRepository.getCards());
     }
@@ -54,10 +54,10 @@ public class GameController {
         int size = stack.size();
         List<Card> deck1 = new ArrayList<>(stack.subList(0, size / 2));
         List<Card> deck2 = new ArrayList<>(stack.subList(size / 2, size));
-        return new List[] {deck1,deck2};
+        return new List[]{deck1, deck2};
     }
 
-    private void gamePreparation(){
+    private void gamePreparation() {
         addCardsToStack();
         stackShuffle();
         this.decks = devideStackIntoDeck(stack);
@@ -92,7 +92,6 @@ public class GameController {
         return this.stack;
     }
 
-    public String winnerCard(Card card1, Card card2, String stat) {
     public static void main(String[] args) {
         CardParser cardParser = new CardParser();
         GameController gameController = new GameController(cardParser);
@@ -101,14 +100,14 @@ public class GameController {
         System.out.println(gameController.player2.getDeck());
     }
 
+    public String winnerCard(Card card1, Card card2, String stat) {
         if (card1.getFields().get(stat) > card2.getFields().get(stat)) {
 
             player1.getDeck().add(card1);
             player1.getDeck().add(card2);
             return "The winner is " + card1.getDescription();
 
-        }
-        else {
+        } else {
             player2.getDeck().add(card1);
             player2.getDeck().add(card2);
             return "The winner is " + card2.getDescription();
