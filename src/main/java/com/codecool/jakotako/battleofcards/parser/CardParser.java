@@ -19,7 +19,7 @@ public class CardParser extends XMLParser{
     }
 
     private void parse(){
-        NodeList nodeList = document.getElementsByTagName("Card");
+        NodeList nodeList = document.getElementsByTagName("card");
 
         for(int i = 0;i < nodeList.getLength(); i++){
             Node node = nodeList.item(i);
