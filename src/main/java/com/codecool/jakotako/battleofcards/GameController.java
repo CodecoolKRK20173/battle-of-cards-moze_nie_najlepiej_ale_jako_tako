@@ -14,9 +14,10 @@ public class GameController {
 
         this.player1 = new Player(display.playerNameInput(), deck);
         this.player2 = new Player(display.playerNameInput(), deck);
+        round();
     }
 
-    public void round(Player player1, Player player2) {
+    public void round() {
 
         while (!player1.getDeck().isEmpty() || !player2.getDeck().isEmpty()) {
 
@@ -56,12 +57,15 @@ public class GameController {
 
         if (card1.getFields().get(stat) > card2.getFields().get(stat)) {
 
+            player1.getDeck().add(card1);
+            player1.getDeck().add(card2);
             return "The winner is " + card1.getDescription();
-        } else {
 
+        }
+        else {
+            player2.getDeck().add(card1);
+            player2.getDeck().add(card2);
             return "The winner is " + card2.getDescription();
         }
     }
-
-
 }
