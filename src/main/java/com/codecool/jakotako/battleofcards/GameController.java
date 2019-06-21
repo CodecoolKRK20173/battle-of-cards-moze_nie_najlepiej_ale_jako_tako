@@ -1,4 +1,5 @@
 package com.codecool.jakotako.battleofcards;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -7,9 +8,9 @@ public class GameController {
     Player player1;
     Player player2;
     Display display = new Display();
+    //boolean isOn = true;
 
     public GameController() {
-
 
         this.player1 = new Player(display.playerNameInput(), deck);
         this.player2 = new Player(display.playerNameInput(), deck);
@@ -17,10 +18,13 @@ public class GameController {
 
     public void round(Player player1, Player player2) {
 
-        display.displayCard(player1, player1.getTopCard());
-        display.displayCard(player2, player2.getTopCard());
-        System.out.println("The winner is " + winnerCard(player1.getTopCard(), player2.getTopCard()));
+        while (!player1.getDeck().isEmpty() || !player2.getDeck().isEmpty()) {
 
+            display.displayCard(player1, player1.getTopCard());
+            display.displayCard(player2, player2.getTopCard());
+            String chooseStat = chooseStat();
+            winnerCard(player1.getTopCard(), player2.getTopCard(), chooseStat);
+        }
     }
 
     public String chooseStat() {
@@ -33,7 +37,7 @@ public class GameController {
             switch (statNum) {
 
                 case 1:
-                    stat ="Attack";
+                    stat = "Attack";
                 case 2:
                     stat = "Defence";
                 case 3:
@@ -48,22 +52,16 @@ public class GameController {
         return stat;
     }
 
-    public String winnerCard(Card card1, Card card2) {
+    public String winnerCard(Card card1, Card card2, String stat) {
 
-        if(card1.getFields().get(chooseStat()) > card2.getFields().get(chooseStat()) ) {
+        if (card1.getFields().get(stat) > card2.getFields().get(stat)) {
 
-            return card1.getDescription();
+            return "The winner is " + card1.getDescription();
+        } else {
+
+            return "The winner is " + card2.getDescription();
         }
-        else {
-
-            return card2.getDescription();
-        }
-
     }
-
-
-
-
 
 
 }
