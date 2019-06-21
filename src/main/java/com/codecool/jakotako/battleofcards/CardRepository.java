@@ -9,12 +9,17 @@ public class CardRepository {
     private Iterator<Card> cardIterator;
     private List<Card> cards = new ArrayList<>();
 
+
     public CardRepository() {
         cardIterator = new CardIterator();
     }
 
     public void addCard(Card card) {
         cards.add(card);
+    }
+
+    public List<Card> getCards() {
+        return cards;
     }
 
     public Iterator<Card> getIterator() {
@@ -33,10 +38,5 @@ public class CardRepository {
         public Card next() {
             return hasNext() ? cards.get(index++) : null;
         }
-//        @Override
-//        public void remove(){
-//            return;
-//        }
-
     }
 }
