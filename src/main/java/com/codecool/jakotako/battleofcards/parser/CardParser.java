@@ -12,14 +12,14 @@ public class CardParser extends XMLParser{
 
     private CardRepository cardRepository;
 
-    public CardParser{
-        this.cardRepository = new CardRepository;
+    public CardParser() {
+        this.cardRepository = new CardRepository();
         loadXmlDocument("src/resources/cards.xml");
         parse();
     }
 
     private void parse(){
-        NodeList nodeList = document.getElementsByTagName("Card");
+        NodeList nodeList = document.getElementsByTagName("card");
 
         for(int i = 0;i < nodeList.getLength(); i++){
             Node node = nodeList.item(i);

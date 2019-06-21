@@ -27,5 +27,10 @@ public class Card {
             return this.description;
         }
 
-
+    @Override
+    public String toString() {
+        return "Card{" +
+                "description='" + description + '\'' +
+                '}';
     }
+}
