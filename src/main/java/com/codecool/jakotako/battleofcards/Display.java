@@ -1,7 +1,7 @@
 package com.codecool.jakotako.battleofcards;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 
 
 public class Display {
@@ -27,28 +27,4 @@ public class Display {
         System.out.println("─────────────────────────────────");
     }
 
-    public String chooseStat() {
-
-        Scanner reader = new Scanner(System.in);
-        System.out.println("Choose attribute you want to fight with:");
-        int statNum = reader.nextInt();
-        try {
-            switch (statNum) {
-
-                case 1:
-                    return "Attack";
-                case 2:
-                    return "Defence";
-                case 3:
-                    return "Speed";
-                case 4:
-                    return "Strength";
-            }
-        }
-        catch (InputMismatchException ex) {
-            System.out.println("Please enter a number.");
-        }
-
-    return "Attack";
-    }
 }

@@ -16,4 +16,15 @@ public class Player{
         return this.name;
     }
 
+    public List<Card> getDeck() {
+        return this.deck;
+    }
+
+    public Card getTopCard() {
+        if (deck.isEmpty())
+            return null;
+        else
+            return deck.get(0);
+    }
+
 }
