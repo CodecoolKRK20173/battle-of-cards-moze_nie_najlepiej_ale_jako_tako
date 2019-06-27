@@ -88,12 +88,16 @@ public class GameController {
 
                 case 1:
                     stat = "Attack";
+                    break;
                 case 2:
                     stat = "Defence";
+                    break;
                 case 3:
                     stat = "Speed";
+                    break;
                 case 4:
                     stat = "Strength";
+                    break;
             }
         } catch (InputMismatchException ex) {
             System.out.println("Please enter a number.");
