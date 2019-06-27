@@ -31,14 +31,12 @@ public class GameController {
     }
 
     public void round() {
+        display.displayCard(player1, player1.getTopCard());
+        display.displayCard(player2, player2.getTopCard());
+        String chooseStat = chooseStat();
+        winnerCard(player1.getTopCard(), player2.getTopCard(), chooseStat);
+           
 
-        while (!player1.getDeck().isEmpty() || !player2.getDeck().isEmpty()) {
-
-            display.displayCard(player1, player1.getTopCard());
-            display.displayCard(player2, player2.getTopCard());
-            String chooseStat = chooseStat();
-            winnerCard(player1.getTopCard(), player2.getTopCard(), chooseStat);
-        }
     }
 
     private void addCardsToStack() {
@@ -96,13 +94,14 @@ public class GameController {
         CardParser cardParser = new CardParser();
         GameController gameController = new GameController(cardParser);
         System.out.println(gameController.getStack());
-        System.out.println(decks[0]);
+        System.out.println(gameController.player1.getDeck());
         System.out.println(gameController.player2.getDeck());
     }
 
     public String winnerCard(Card card1, Card card2, String stat) {
         if (card1.getFields().get(stat) > card2.getFields().get(stat)) {
-
+            player1.getDeck().remove(card1);
+            player2.getDeck().remove(card2);
             player1.getDeck().add(card1);
             player1.getDeck().add(card2);
             return "The winner is " + card1.getDescription();
