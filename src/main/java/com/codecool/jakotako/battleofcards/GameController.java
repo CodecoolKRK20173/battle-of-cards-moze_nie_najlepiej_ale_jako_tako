@@ -17,7 +17,7 @@ public class GameController {
     Player player1;
     Player player2;
     Display display = new Display();
-    //boolean isOn = true;
+    boolean gameIsOn = true;
 
     public GameController(CardParser cardParser) {
         cardRepository = cardParser.getCardRepository();
@@ -25,12 +25,28 @@ public class GameController {
         Display display = new Display();
         this.player1 = new Player(display.playerNameInput(), decks[0]);
         this.player2 = new Player(display.playerNameInput(), decks[1]);
-        round();
+        game();
+
 
 
     }
 
-    public void round() {
+    public void game(){
+        while(gameIsOn){
+            round();
+            if(player1.getDeck().isEmpty()){
+                gameIsOn = false;
+                System.out.println(player2.getName() + " won the game!");
+            }
+            else if(player2.getDeck().isEmpty()){
+                gameIsOn = false;
+                System.out.println(player1.getName() + " won the game!");
+            }
+
+        }
+    }
+
+    private void round() {
         display.displayCard(player1, player1.getTopCard());
         display.displayCard(player2, player2.getTopCard());
         String chooseStat = chooseStat();
@@ -98,18 +114,24 @@ public class GameController {
         System.out.println(gameController.player2.getDeck());
     }
 
-    public String winnerCard(Card card1, Card card2, String stat) {
-        if (card1.getFields().get(stat) > card2.getFields().get(stat)) {
+    public void winnerCard(Card card1, Card card2, String stat) {
+        if (card1.getFields().get(stat) >= card2.getFields().get(stat)) {
             player1.getDeck().remove(card1);
             player2.getDeck().remove(card2);
             player1.getDeck().add(card1);
             player1.getDeck().add(card2);
-            return "The winner is " + card1.getDescription();
+            System.out.println("The winner is " + card1.getDescription());
+            System.out.println(player1.getDeck().size());
+            System.out.println(player2.getDeck().size());
 
         } else {
+            player1.getDeck().remove(card1);
+            player2.getDeck().remove(card2);
             player2.getDeck().add(card1);
             player2.getDeck().add(card2);
-            return "The winner is " + card2.getDescription();
+            System.out.println("The winner is " + card2.getDescription());
+            System.out.println(player1.getDeck().size());
+            System.out.println(player2.getDeck().size());
         }
     }
 }
