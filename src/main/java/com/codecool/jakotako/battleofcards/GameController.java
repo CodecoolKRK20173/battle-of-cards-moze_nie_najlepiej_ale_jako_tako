@@ -48,8 +48,8 @@ public class GameController {
 
     private void round() {
         display.displayCard(player1, player1.getTopCard());
-        display.displayCard(player2, player2.getTopCard());
         String chooseStat = chooseStat();
+        display.displayBattle(player1, player2, player1.getTopCard(), player2.getTopCard());
         winnerCard(player1.getTopCard(), player2.getTopCard(), chooseStat);
            
 
@@ -125,8 +125,6 @@ public class GameController {
             player1.getDeck().add(card1);
             player1.getDeck().add(card2);
             System.out.println("The winner is " + card1.getDescription());
-            System.out.println(player1.getDeck().size());
-            System.out.println(player2.getDeck().size());
 
         } else {
             player1.getDeck().remove(card1);
@@ -134,8 +132,6 @@ public class GameController {
             player2.getDeck().add(card1);
             player2.getDeck().add(card2);
             System.out.println("The winner is " + card2.getDescription());
-            System.out.println(player1.getDeck().size());
-            System.out.println(player2.getDeck().size());
         }
     }
 }
