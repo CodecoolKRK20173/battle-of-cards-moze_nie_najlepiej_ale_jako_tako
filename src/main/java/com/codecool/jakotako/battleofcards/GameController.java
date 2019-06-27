@@ -110,13 +110,6 @@ public class GameController {
         return this.stack;
     }
 
-    public static void main(String[] args) {
-        CardParser cardParser = new CardParser();
-        GameController gameController = new GameController(cardParser);
-        System.out.println(gameController.getStack());
-        System.out.println(gameController.player1.getDeck());
-        System.out.println(gameController.player2.getDeck());
-    }
 
     public void winnerCard(Card card1, Card card2, String stat) {
         if (card1.getFields().get(stat) >= card2.getFields().get(stat)) {
