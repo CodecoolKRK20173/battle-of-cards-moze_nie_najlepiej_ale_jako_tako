@@ -75,7 +75,7 @@
         <Stats>
             <Stat id="Attack">99</Stat>
             <Stat id="Defence">99</Stat>
-            <Stat id="Speed">99</Stat>
+            <Stat id="Speed">50</Stat>
             <Stat id="Strength">99</Stat>
         </Stats>
     </card>
@@ -185,7 +185,7 @@
         <Stats>
             <Stat id="Attack">10</Stat>
             <Stat id="Defence">12</Stat>
-            <Stat id="Speed">36</Stat>
+            <Stat id="Speed">99</Stat>
             <Stat id="Strength">35</Stat>
         </Stats>
     </card>
